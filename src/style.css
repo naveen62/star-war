@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+* {
+    box-sizing: border-box;
+    font-family: Open Sans;
+}
+
+.characters_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 500px;
+}
+
+.character {
+    flex-basis: 350px;
+    background: #4A148C;
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+    font-weight: 600;
+    padding-left: 2rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5)
+}
+
+.character_name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.loader_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+.loader {
+    border: 16px solid #bdc3c7;
+    width: 120px;
+    height: 120px;
+    border-top-color: #560087;
+    border-bottom-color: #560087;
+    border-radius: 100%;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.pag_container {
+    display: flex;
+    justify-content: center;
+}
+.pag_item {
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 1rem;
+}
+.icon {
+    font-size: 1rem;
+}
+.spin {
+    margin-left: 5px;
+    font-size: 13px;
+    animation-name: spin2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes spin2 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@media only screen and (max-width: 50rem) {
+    .characters_container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        height: auto;
+    }
+    .character {
+        flex-basis: auto;
+    }
+  }
