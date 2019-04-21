@@ -33,7 +33,10 @@ class App extends Component {
     const httpArr = [];
     const httpData = [];
     const start = this.state.start + 9;
-    const end = this.state.end + 9;
+    let end = this.state.end + 9;
+    if(start == 82) {
+      end = 87;
+    }
     for(var i=start; i<=end; i++) {
       if(i !== 17) {
         httpArr.push(axios.get(`https://swapi.co/api/people/${i}/`));
@@ -58,7 +61,10 @@ class App extends Component {
     const httpArr = [];
     const httpData = [];
     const start = this.state.start - 9;
-    const end = this.state.end - 9;
+    let end = this.state.end - 9;
+    if(end == 78) {
+      end = 81
+    }
     for(var i=start; i<=end; i++) {
       if(i !== 17) {
         httpArr.push(axios.get(`https://swapi.co/api/people/${i}/`));
